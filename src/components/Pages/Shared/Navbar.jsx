@@ -12,7 +12,7 @@ const Navbar = () => {
     </>
 
     return (
-        <div className="navbar bg-base-100 px-5">
+        <div className="navbar bg-gray-200 px-5">
 
             {/* Nav Item */}
             <div className="navbar lg:w-1/4">
