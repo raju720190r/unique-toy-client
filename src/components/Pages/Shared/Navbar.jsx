@@ -26,8 +26,8 @@ const Navbar = () => {
                 </div>
                 {/* Logo Section */}
                 <div className='lg:flex'>
-                    <img src={logo} style={{width:70}} alt="" />
-                    <h2 className='lg:text-3xl font-bold lg:ml-2'>Unique Toys</h2>
+                    <img src={logo} style={{width:90}} alt="" />
+                    <h2 className='lg:text-xl font-bold lg:ml-2'>UNIQUE TOYS</h2>
                 </div>
             </div>
             <div className="navbar lg:w-2/4 hidden lg:flex">
