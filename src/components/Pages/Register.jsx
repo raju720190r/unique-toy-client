@@ -1,11 +1,9 @@
-import { Link } from "react-router-dom";
 
-
-const Login = () => {
+const Register = () => {
     return (
         <div>
             <div className={`py-56 lg:py-10 bg-[url('https://i.ibb.co/gjVTwyC/banner-1.jpg')]  bg-center bg-cover relative `}>
-                <h2 className="text-center font bold text-5xl">Please Login</h2>
+                <h2 className="text-center font bold text-5xl">Please Register</h2>
 
             </div>
             <div className="hero  bg-base-200">
@@ -14,28 +12,32 @@ const Login = () => {
                         <div className="card-body">
                             <div className="form-control">
                                 <label className="label">
+                                    <span className="label-text">Name</span>
+                                </label>
+                                <input type="text" name="name" placeholder="Your Name" className="input input-bordered" required/>
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
-                                <input type="text" placeholder="email" className="input input-bordered" />
+                                <input type="text" name="email" placeholder="Your Email" className="input input-bordered" required/>
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="text" placeholder="password" className="input input-bordered" />
+                                <input type="text" name="password" placeholder="Password" className="input input-bordered" required/>
+                            </div>
+                            <div className="form-control">
                                 <label className="label">
-                                    <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                                    <span className="label-text">Photo URL</span>
                                 </label>
+                                <input type="text" name="photoUrl" placeholder="Photo URL" className="input input-bordered" required/>
                             </div>
                             <div className="form-control mt-2">
-                                <button className="btn bg-pink-300 border-none">Login</button>
+                               <input className="btn" type="submit" value="Register Here" />
                             </div>
-                            <div className="form-control">
-                                <button className="btn">Sign In With Google</button>
-                            </div>
-                            <div className="form-control">
-                                <p><small>New User? <Link to={'/register'} className="btn btn-link">Register Here</Link></small></p>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -44,4 +46,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Register;
