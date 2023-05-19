@@ -35,7 +35,7 @@ const Register = () => {
                                 <input type="text" name="photoUrl" placeholder="Photo URL" className="input input-bordered" required/>
                             </div>
                             <div className="form-control mt-2">
-                               <input className="btn" type="submit" value="Register Here" />
+                               <input className="btn bg-pink-300 border-none" type="submit" value="Register Here" />
                             </div>
 
                         </div>

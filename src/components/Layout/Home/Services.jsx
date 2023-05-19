@@ -3,7 +3,7 @@ import img2 from '../../../assets/sr-2.png'
 import img3 from '../../../assets/sr-3.png'
 const Services = () => {
     return (
-        <div className='my-6'>
+        <div className='lg:md:mx-20'>
             <h2 className='text-center font-bold text-3xl my-6'>Our Services</h2>
             <div className="grid lg:grid-cols-3 gap-5">
                 <div className="card bg-gray-100 shadow-xl">
