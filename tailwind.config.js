@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {},
+    outlineOffset: {
+      3: '3px',
+    }
   },
   plugins: [require("daisyui")],
 }

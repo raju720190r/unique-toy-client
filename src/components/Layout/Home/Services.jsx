@@ -6,7 +6,7 @@ const Services = () => {
         <div className='lg:md:mx-20'>
             <h2 className='text-center font-bold text-3xl my-6'>Our Services</h2>
             <div className="grid lg:grid-cols-3 gap-5">
-                <div className="card bg-gray-100 shadow-xl">
+                <div className="card bg-gray-100  shadow-xl">
                     <figure className="px-10 pt-10">
                         <img src={img} alt="Shoes" className="rounded-xl" />
                     </figure>

@@ -30,7 +30,7 @@ const Gallery = () => {
         <div className='lg:px-20 lg:my-8 gap-5'>
             <Carousel responsive={responsive}>
                {
-                toys.map(toy=> <div key={toy.carName} className="card w-52 bg-base-100 border rounded-none bg-sky-100 ">
+                toys.map(toy=> <div key={toy.carName} className="card w-52 bg-base-100 border rounded-none bg-pink-100 hover:bg-sky-100 ">
                 <figure><img src={toy.pictureUrl} style={{width:100}} alt="car" /></figure>
                 <div className="card-body">
                     <p><small>Rating : {toy.rating}</small></p>
