@@ -30,7 +30,7 @@ const Navbar = () => {
                     <h2 className='lg:text-xl font-bold lg:ml-2'>UNIQUE TOYS</h2>
                 </div>
             </div>
-            <div className="navbar lg:w-2/4 hidden lg:flex">
+            <div className="navbar lg:w-2/4 justify-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     {navbar}
                 </ul>

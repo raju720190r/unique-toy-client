@@ -1,0 +1,307 @@
+ [
+      {
+        "carName": "Sleek Sedan",
+        "price": 19.99,
+        "rating": 4.5,
+        "subCategory": "sedan",
+        "sellerEmail": "seller1@example.com",
+        "description": "A sleek and stylish sedan toy car.",
+        "sellerName": "Toy Car World",
+        "pictureUrl": "https://example.com/sedan1.jpg"
+      },
+      {
+        "carName": "Compact Sedan",
+        "price": 12.99,
+        "rating": 4.2,
+        "subCategory": "sedan",
+        "sellerEmail": "seller2@example.com",
+        "description": "A compact and affordable sedan toy car.",
+        "sellerName": "Toyland",
+        "pictureUrl": "https://example.com/sedan2.jpg"
+      },
+      {
+        "carName": "Performance Sedan",
+        "price": 29.99,
+        "rating": 4.8,
+        "subCategory": "sedan",
+        "sellerEmail": "seller3@example.com",
+        "description": "A high-performance sedan toy car with working headlights.",
+        "sellerName": "Fun Toys",
+        "pictureUrl": "https://example.com/sedan3.jpg"
+      },
+  
+      {
+        "carName": "Speedy Sports Car",
+        "price": 24.99,
+        "rating": 4.6,
+        "subCategory": "sports",
+        "sellerEmail": "seller4@example.com",
+        "description": "A speedy and aerodynamic sports car toy.",
+        "sellerName": "Speedy Toys",
+        "pictureUrl": "https://example.com/sports1.jpg"
+      },
+      {
+        "carName": "High-End Sports Car",
+        "price": 34.99,
+        "rating": 4.9,
+        "subCategory": "sports",
+        "sellerEmail": "seller5@example.com",
+        "description": "A high-end sports car toy with realistic engine sounds.",
+        "sellerName": "Superior Toys",
+        "pictureUrl": "https://example.com/sports2.jpg"
+      },
+      {
+        "carName": "Affordable Sports Car",
+        "price": 16.99,
+        "rating": 4.0,
+        "subCategory": "sports",
+        "sellerEmail": "seller6@example.com",
+        "description": "An affordable and durable sports car toy.",
+        "sellerName": "Toy Galaxy",
+        "pictureUrl": "https://example.com/sports3.jpg"
+      },
+    
+      {
+        "carName": "Rugged Off-Roader",
+        "price": 39.99,
+        "rating": 4.7,
+        "subCategory": "off-road",
+        "sellerEmail": "seller7@example.com",
+        "description": "A rugged off-road toy car with large wheels for all-terrain play.",
+        "sellerName": "Adventure Toys",
+        "pictureUrl": "https://example.com/offroad1.jpg"
+      },
+      {
+        "carName": "Suspension Off-Roader",
+        "price": 27.99,
+        "rating": 4.3,
+        "subCategory": "off-road",
+        "sellerEmail": "seller8@example.com",
+        "description": "An off-road toy car with a built-in suspension system.",
+        "sellerName": "Toys R Fun",
+        "pictureUrl": "https://example.com/offroad2.jpg"
+      },
+      {
+        "carName": "Mini Off-Roader",
+        "price": 21.99,
+        "rating": 4.1,
+        "subCategory": "off-road",
+        "sellerEmail": "seller9@example.com",
+        "description": "A mini off-road toy car for exciting adventures.",
+        "sellerName": "Miniature World",
+        "pictureUrl": "https://example.com/offroad3.jpg"
+      },
+    
+      {
+        "carName": "Formula Racing Car",
+        "price": 49.99,
+        "rating": 4.8,
+        "subCategory": "racing",
+        "sellerEmail": "seller10@example.com",
+        "description": "A high-speed formula racing car toy with realistic design.",
+        "sellerName": "Speedsters",
+        "pictureUrl": "https://example.com/racing1.jpg"
+      },
+      {
+        "carName": "Drift Racing Car",
+        "price": 31.99,
+        "rating": 4.4,
+        "subCategory": "racing",
+        "sellerEmail": "seller11@example.com",
+        "description": "A drift racing car toy for sideways fun.",
+        "sellerName": "Racing World",
+        "pictureUrl": "https://example.com/racing2.jpg"
+      },
+      {
+        "carName": "Street Racing Car",
+        "price": 27.99,
+        "rating": 4.2,
+        "subCategory": "racing",
+        "sellerEmail": "seller12@example.com",
+        "description": "A street racing car toy with vibrant colors and decals.",
+        "sellerName": "Fastlane Toys",
+        "pictureUrl": "https://example.com/racing3.jpg"
+      },
+    
+      {
+        "carName": "Luxury SUV",
+        "price": 59.99,
+        "rating": 4.9,
+        "subCategory": "luxury",
+        "sellerEmail": "seller13@example.com",
+        "description": "A luxurious SUV toy car with detailed interior and opening doors.",
+        "sellerName": "Luxury Toys Inc.",
+        "pictureUrl": "https://example.com/luxury1.jpg"
+      },
+      {
+        "carName": "Convertible Roadster",
+        "price": 45.99,
+        "rating": 4.7,
+        "subCategory": "luxury",
+        "sellerEmail": "seller14@example.com",
+        "description": "A convertible roadster toy car for open-top cruising.",
+        "sellerName": "Elite Models",
+        "pictureUrl": "https://example.com/luxury2.jpg"
+      },
+      {
+        "carName": "Executive Sedan",
+        "price": 55.99,
+        "rating": 4.8,
+        "subCategory": "luxury",
+        "sellerEmail": "seller15@example.com",
+        "description": "An executive sedan toy car with realistic features and detailing.",
+        "sellerName": "Prestige Toys",
+        "pictureUrl": "https://example.com/luxury3.jpg"
+      },
+      {
+        "carName": "Monster Truck",
+        "price": 34.99,
+        "rating": 4.6,
+        "subCategory": "truck",
+        "sellerEmail": "seller16@example.com",
+        "description": "A monster truck toy with oversized wheels and impressive off-road capabilities.",
+        "sellerName": "Big Wheels",
+        "pictureUrl": "https://example.com/truck1.jpg"
+      },
+      {
+        "carName": "Dump Truck",
+        "price": 26.99,
+        "rating": 4.3,
+        "subCategory": "truck",
+        "sellerEmail": "seller17@example.com",
+        "description": "A dump truck toy for realistic construction play.",
+        "sellerName": "Construction Toys Co.",
+        "pictureUrl": "https://example.com/truck2.jpg"
+      },
+      {
+        "carName": "Tow Truck",
+        "price": 28.99,
+        "rating": 4.1,
+        "subCategory": "truck",
+        "sellerEmail": "seller18@example.com",
+        "description": "A tow truck toy with a functioning tow hook and moving parts.",
+        "sellerName": "Rescue Toys",
+        "pictureUrl": "https://example.com/truck3.jpg"
+      },
+      {
+        "carName": "Police Cruiser",
+        "price": 22.99,
+        "rating": 4.4,
+        "subCategory": "police",
+        "sellerEmail": "seller19@example.com",
+        "description": "A police cruiser toy car with flashing lights and realistic siren sounds.",
+        "sellerName": "Justice Toys",
+        "pictureUrl": "https://example.com/police1.jpg"
+      },
+      {
+        "carName": "Police SUV",
+        "price": 32.99,
+        "rating": 4.7,
+        "subCategory": "police",
+        "sellerEmail": "seller20@example.com",
+        "description": "A police SUV toy car for law enforcement adventures.",
+        "sellerName": "Cop Cars Inc.",
+        "pictureUrl": "https://example.com/police2.jpg"
+      },
+      {
+        "carName": "SWAT Armored Vehicle",
+        "price": 42.99,
+        "rating": 4.9,
+        "subCategory": "police",
+        "sellerEmail": "seller21@example.com",
+        "description": "A SWAT armored vehicle toy with opening doors and roof hatch.",
+        "sellerName": "SWAT Toys",
+        "pictureUrl": "https://example.com/police3.jpg"
+      },
+      {
+        "carName": "Excavator",
+        "price": 39.99,
+        "rating": 4.7,
+        "subCategory": "construction",
+        "sellerEmail": "seller22@example.com",
+        "description": "An excavator toy with a movable arm and realistic digging action.",
+        "sellerName": "Digging Toys",
+        "pictureUrl": "https://example.com/construction1.jpg"
+      },
+      {
+        "carName": "Bulldozer",
+        "price": 36.99,
+        "rating": 4.5,
+        "subCategory": "construction",
+        "sellerEmail": "seller23@example.com",
+        "description": "A bulldozer toy for pushing and clearing small objects.",
+        "sellerName": "Construction Kingdom",
+        "pictureUrl": "https://example.com/construction2.jpg"
+      },
+      {
+        "carName": "Crane Truck",
+        "price": 49.99,
+        "rating": 4.8,
+        "subCategory": "construction",
+        "sellerEmail": "seller24@example.com",
+        "description": "A crane truck toy with a rotating crane arm and extendable hook.",
+        "sellerName": "Crane Masters",
+        "pictureUrl": "https://example.com/construction3.jpg"
+      },
+      {
+        "carName": "Formula Racecar",
+        "price": 49.99,
+        "rating": 4.8,
+        "subCategory": "racecar",
+        "sellerEmail": "seller25@example.com",
+        "description": "A high-speed formula racecar toy with realistic design.",
+        "sellerName": "Speed Racers",
+        "pictureUrl": "https://example.com/racecar1.jpg"
+      },
+      {
+        "carName": "GT Racecar",
+        "price": 39.99,
+        "rating": 4.5,
+        "subCategory": "racecar",
+        "sellerEmail": "seller26@example.com",
+        "description": "A GT racecar toy for thrilling track racing.",
+        "sellerName": "Racing Toys Inc.",
+        "pictureUrl": "https://example.com/racecar2.jpg"
+      },
+      {
+        "carName": "Drag Racecar",
+        "price": 44.99,
+        "rating": 4.7,
+        "subCategory": "racecar",
+        "sellerEmail": "seller27@example.com",
+        "description": "A drag racecar toy with a vibrant design and rear spoiler.",
+        "sellerName": "Drag Racing Legends",
+        "pictureUrl": "https://example.com/racecar3.jpg"
+      },
+      {
+        "carName": "Vintage Convertible",
+        "price": 32.99,
+        "rating": 4.6,
+        "subCategory": "vintage",
+        "sellerEmail": "seller28@example.com",
+        "description": "A vintage convertible toy car with a classic design.",
+        "sellerName": "Classic Toys",
+        "pictureUrl": "https://example.com/vintage1.jpg"
+      },
+      {
+        "carName": "Vintage Pickup Truck",
+        "price": 38.99,
+        "rating": 4.4,
+        "subCategory": "vintage",
+        "sellerEmail": "seller29@example.com",
+        "description": "A vintage pickup truck toy with a retro look and wooden bed.",
+        "sellerName": "Nostalgia Toys",
+        "pictureUrl": "https://example.com/vintage2.jpg"
+      },
+      {
+        "carName": "Vintage Roadster",
+        "price": 29.99,
+        "rating": 4.2,
+        "subCategory": "vintage",
+        "sellerEmail": "seller30@example.com",
+        "description": "A vintage roadster toy car for classic motoring adventures.",
+        "sellerName": "Retro Wheels",
+        "pictureUrl": "https://example.com/vintage3.jpg"
+      }
+    ]
+  
