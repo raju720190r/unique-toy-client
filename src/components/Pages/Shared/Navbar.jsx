@@ -1,7 +1,13 @@
 
 import { Link } from 'react-router-dom';
 import logo from '../../../assets/Logo.png'
+import { useContext } from 'react';
+import { AuthContext } from '../../../providers/AuthProvider';
 const Navbar = () => {
+    const {user, logOut}=useContext(AuthContext);
+    const handleLogOut =()=>{
+        logOut();
+    }
 
     const navbar= <>
       <li><Link to={'/'}>Home</Link></li>
@@ -9,15 +15,7 @@ const Navbar = () => {
      <li><Link to={'/allToy'}>All Toys</Link></li>
      <li><Link to={'/addToy'}>Add Toy</Link></li>
      <li><Link to={'/myToy'}>My Toys</Link></li>
-     
-     
-     
-     
-      {/* <li><a href="">All Toys</a></li>
-      <li><a href="">My Toys</a></li>
-      <li><a href="">Add a Toys</a></li>
-      <li><a href="">Blog</a></li> */}
-      
+       
     </>
 
     return (
@@ -57,12 +55,11 @@ const Navbar = () => {
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         <li>
                             <a className="justify-between">
-                                Profile
-                                <span className="badge">New</span>
+                                User Name
                             </a>
                         </li>
                         <li><a>Settings</a></li>
-                        <li><a>Logout</a></li>
+                        <li><button onClick={handleLogOut}>Logout</button></li>
                     </ul>
                 </div>
             </div>
