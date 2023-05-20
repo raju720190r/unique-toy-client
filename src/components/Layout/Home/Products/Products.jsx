@@ -1,13 +1,13 @@
-import { useEffect, useState } from "react";
-import Product from "./Product";
+// import { useEffect, useState } from "react";
+// import Product from "./Product";
 
 const Products = () => {
-   const [toys,setToys]=useState([]);
-   useEffect(()=>{
-    fetch('http://localhost:5000/toys')
-          .then(res=>res.json())
-          .then(data=>setToys(data))
-   },[])
+//    const [toys,setToys]=useState([]);
+//    useEffect(()=>{
+//     fetch('http://localhost:5000/toys')
+//           .then(res=>res.json())
+//           .then(data=>setToys(data))
+//    },[])
     return (
         <div>
             <div className="text-center mb-5">
@@ -18,9 +18,9 @@ const Products = () => {
             </div>
             </div>
             <div className="grid lg:grid-cols-3 gap-7 lg:px-20">
-               {
+               {/* {
                 toys.map(toy=><Product key={toy._id} toy={toy}></Product>)
-               }
+               } */}
             </div>
             
         </div>
