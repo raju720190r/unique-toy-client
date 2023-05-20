@@ -1,13 +1,22 @@
 
+import { Link } from 'react-router-dom';
 import logo from '../../../assets/Logo.png'
 const Navbar = () => {
 
     const navbar= <>
-      <li><a href="">Home</a></li>
-      <li><a href="">All Toys</a></li>
+      <li><Link to={'/'}>Home</Link></li>
+      <li><Link to={'/blog'}>Blog</Link></li>
+     <li><Link to={'allToy'}>All Toys</Link></li>
+     <li><Link to={'/addToy'}>Add A Toy</Link></li>
+     <li><Link to={'/myToy'}>My Toys</Link></li>
+     
+     
+     
+     
+      {/* <li><a href="">All Toys</a></li>
       <li><a href="">My Toys</a></li>
       <li><a href="">Add a Toys</a></li>
-      <li><a href="">Blog</a></li>
+      <li><a href="">Blog</a></li> */}
       
     </>
 
