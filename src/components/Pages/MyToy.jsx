@@ -11,7 +11,29 @@ const MyToy = () => {
         fetch(`http://localhost:5000/myToys/${user?.email}`)
             .then(res => res.json())
             .then(data => setJobs(data))
-    }, [user])
+    }, [user]);
+
+    const handleDelete = id => {
+        const proceed = confirm('Are You sure');
+        if (proceed) {
+            fetch(`http://localhost:5000/toys/${id}`,{
+                method: 'DELETE'
+                
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data)
+                    if(data.deletedCount>0){
+                        alert('deleted Successful')
+                        const remaining = jobs.filter(job =>job._id !==id)
+                        setJobs(remaining)
+                    }
+                })
+        }
+    }
+
+
+
     return (
         <div>
             <h2 className="text-5xl">My Toy Section</h2>
@@ -65,13 +87,13 @@ const MyToy = () => {
                                     <button className="btn bg-pink-300 border-none">Edit</button>
                                 </th>
                                 <th>
-                                    <button className="btn bg-sky-300 border-none">details</button>
+                                    <button onClick={() => handleDelete(job._id)} className="btn bg-sky-300 border-none">delete</button>
                                 </th>
                             </tr>)
                         }
 
                     </tbody>
-                    
+
                 </table>
             </div>
         </div>

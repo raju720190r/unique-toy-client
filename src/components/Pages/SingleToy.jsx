@@ -35,17 +35,6 @@ const SingleToy = ({ toy }) => {
             </td>
             <td>{price}</td>
             <th>
-                    {/* <Button variant="primary" onClick={() => setModalShow(true)}>
-                        Edit
-                    </Button>
-
-                    <ViewDetails
-                        show={modalShow}
-                        onHide={() => setModalShow(false)}
-                    /> */}
-                    <Link to={`/edit/${_id}`}><button className="btn btn-ghost bg-pink-100">edit</button></Link>
-            </th>
-            <th>
                 <Link to={`/viewDetails/${_id}`}><button className="btn btn-ghost bg-pink-100">details</button></Link>
             </th>
         </tr>
