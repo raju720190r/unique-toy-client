@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import { Link } from "react-router-dom";
 
 
 
@@ -12,6 +13,8 @@ const MyToy = () => {
             .then(res => res.json())
             .then(data => setJobs(data))
     }, [user]);
+  
+// Handle Delete
 
     const handleDelete = id => {
         const proceed = confirm('Are You sure');
@@ -31,12 +34,11 @@ const MyToy = () => {
                 })
         }
     }
-
-
+    
 
     return (
         <div>
-            <h2 className="text-5xl">My Toy Section</h2>
+            <h2 className="text-5xl text-center my-5">My Toy</h2>
             <div className="overflow-x-auto w-full">
                 <table className="table w-full">
                     {/* head */}
@@ -84,7 +86,7 @@ const MyToy = () => {
                                 <td>$ {job.price}</td>
                                 <td> {job.quantity}</td>
                                 <th>
-                                    <button className="btn bg-pink-300 border-none">Edit</button>
+                                    <Link to={`/updateToy/${job._id}`}><button className="btn bg-pink-300 border-none">Edit</button></Link>
                                 </th>
                                 <th>
                                     <button onClick={() => handleDelete(job._id)} className="btn bg-sky-300 border-none">delete</button>

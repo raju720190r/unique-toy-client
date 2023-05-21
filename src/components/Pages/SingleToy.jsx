@@ -1,11 +1,7 @@
-import { Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import ViewDetails from "./ViewDetails";
-import React from "react";
 
+import { Link } from "react-router-dom";
 
 const SingleToy = ({ toy }) => {
-    const [modalShow, setModalShow] = React.useState(false);
     const { _id, carName, pictureUrl, price, sellerName, subCategory, sellerEmail } = toy;
     return (
 

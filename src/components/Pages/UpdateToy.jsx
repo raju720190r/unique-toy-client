@@ -1,13 +1,16 @@
-import { useContext } from "react";
-import { useForm } from "react-hook-form";
-import { AuthContext } from "../../providers/AuthProvider";
-const AddToy = () => {
-    const {user} =useContext(AuthContext)
 
-    const { register, handleSubmit,formState: { errors } } = useForm();
+import { useForm } from "react-hook-form";
+import { useLoaderData } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
+const UpdateToy = () => {
+    const {user} =useContext(AuthContext)
+    const loadedToys = useLoaderData();
+    const {_id,carName, pictureUrl, rating, price, sellerName, quantity,subCategory,description,sellerEmail } = loadedToys;
+     const { register, handleSubmit,formState: { errors } } = useForm();
     const onSubmit = data => {
-        fetch('http://localhost:5000/toys',{
-            method:'POST',
+        fetch(`http://localhost:5000/toys/${_id}`,{
+            method:'PUT',
             headers:{
                 'content-type':'application/json'
             },
@@ -15,18 +18,17 @@ const AddToy = () => {
         })
         .then(res=>res.json())
         .then(result=>{
-            if(result.insertedId){
-                alert('Booking Successfully')
+            if(result.modifiedCount>0){
+                alert('Update Successfully')
             }
         })
         
-
+console.log(data)
     };
-
-
+    
     return (
         <div>
-            <h2 className="hero bg-base-100 text-5xl text-center my-5 ">Add A Toy</h2>
+            <h2 className="hero bg-base-100 text-5xl text-center my-5 ">Update Toy</h2>
 
             <div className="hero bg-base-100">
                 <div className="hero-content flex-col ">
@@ -37,49 +39,49 @@ const AddToy = () => {
                                     <label className="label">
                                         <span className="label-text">Toy Name</span>
                                     </label>
-                                    <input className="input input-bordered" {...register("carName")} />
+                                    <input className="input input-bordered" defaultValue={carName}{...register("carName")} />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Seller Name</span>
                                     </label>
-                                    <input className="input input-bordered"  {...register("sellerName")} />
+                                    <input className="input input-bordered"  defaultValue={sellerName}{...register("sellerName")} />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Seller Email</span>
                                     </label>
-                                    <input className="input"  defaultValue={user.email}{...register("sellerEmail", { required: true })} />
+                                    <input className="input" defaultValue={sellerEmail}{...register("sellerEmail", { required: true })} />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Price</span>
                                     </label>
-                                    <input className="input input-bordered"  {...register("price")} />
+                                    <input className="input input-bordered"  defaultValue={price}{...register("price")} />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Rating</span>
                                     </label>
-                                    <input className="input input-bordered" {...register("rating")} />
+                                    <input className="input input-bordered" defaultValue={rating}{...register("rating")} />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Quantity</span>
                                     </label>
-                                    <input className="input input-bordered"  {...register("quantity")} />
+                                    <input className="input input-bordered"  defaultValue={quantity}{...register("quantity")} />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Photo URL</span>
                                     </label>
-                                    <input className="input input-bordered"  {...register("pictureUrl")} />
+                                    <input className="input input-bordered"  defaultValue={pictureUrl}{...register("pictureUrl")} />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Description</span>
                                     </label>
-                                    <input className="input input-bordered" {...register("description")} />
+                                    <input className="input input-bordered" defaultValue={description}{...register("description")} />
                                 </div>
 
                             </div>
@@ -87,14 +89,14 @@ const AddToy = () => {
                                 <label className="label">
                                     <span className="label-text text-center">Category</span>
                                 </label>
-                                <select className="input" {...register("subCategory")}>
+                                <select className="input" defaultValue={subCategory}{...register("subCategory")}>
                                     <option value="police">Police</option>
                                     <option value="luxury">Luxury</option>
                                     <option value="construction">Construction</option>
                                 </select>
                             </div>
                             <div className="form-control">
-                                <input className="btn bg-sky-300 border-none" type="submit" value="Add Toy" />
+                                <input className="btn bg-sky-300 border-none" type="submit" value="Update" />
                             </div>
                         </form>
                     </div>
@@ -104,4 +106,4 @@ const AddToy = () => {
     );
 };
 
-export default AddToy;
+export default UpdateToy;
