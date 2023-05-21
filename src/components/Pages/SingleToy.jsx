@@ -1,9 +1,9 @@
 
 
 const SingleToy = ({toy}) => {
-    const {carName,pictureUrl,price,sellerName,subCategory}=toy;
+    const {carName,pictureUrl,price,sellerName,subCategory,sellerEmail}=toy;
     return (
-        <div>
+        
             <tr>
                 <th>
                     <label>
@@ -26,14 +26,14 @@ const SingleToy = ({toy}) => {
                 <td>
                     {sellerName}
                     <br />
-                    <span className="badge badge-ghost badge-sm">Desktop Support Technician</span>
+                    <span className="badge badge-ghost badge-sm">{sellerEmail}</span>
                 </td>
                 <td>{price}</td>
                 <th>
                     <button className="btn btn-ghost btn-xs">details</button>
                 </th>
             </tr>
-        </div>
+        
     );
 };
 

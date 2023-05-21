@@ -15,9 +15,11 @@ const AddToy = () => {
         })
         .then(res=>res.json())
         .then(result=>{
-            console.log(result)
+            if(result.insertedId){
+                alert('Booking Successfully')
+            }
         })
-        console.log(data);
+        
 
     };
 
