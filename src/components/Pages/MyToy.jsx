@@ -1,10 +1,13 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
+import useTitle from "../../Hooks/useTitle";
 
 
 
 const MyToy = () => {
+    useTitle('MyToy')
     const { user } = useContext(AuthContext);
     const [jobs, setJobs] = useState([]);
 
@@ -17,9 +20,17 @@ const MyToy = () => {
 // Handle Delete
 
     const handleDelete = id => {
-        const proceed = confirm('Are You sure');
-        if (proceed) {
-            fetch(`http://localhost:5000/toys/${id}`,{
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+          }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:5000/toys/${id}`,{
                 method: 'DELETE'
                 
             })
@@ -27,12 +38,21 @@ const MyToy = () => {
                 .then(data => {
                     console.log(data)
                     if(data.deletedCount>0){
-                        alert('deleted Successful')
+                        Swal.fire(
+                            'Deleted!',
+                            'Your file has been deleted.',
+                            'success'
+                          )
                         const remaining = jobs.filter(job =>job._id !==id)
                         setJobs(remaining)
                     }
                 })
-        }
+              
+            }
+          })
+         
+        
+        
     }
     
 

@@ -6,7 +6,9 @@ const Services = () => {
         <div className='lg:md:mx-20'>
             <h2 className='text-center font-bold text-3xl my-6'>Our Services</h2>
             <div className="grid lg:grid-cols-3 gap-5">
-                <div className="card bg-gray-100  shadow-xl">
+                <div className="card bg-gray-100  shadow-xl" data-aos="fade-right"
+                data-aos-duration="1500"
+                >
                     <figure className="px-10 pt-10">
                         <img src={img} alt="Shoes" className="rounded-xl" />
                     </figure>
@@ -15,7 +17,9 @@ const Services = () => {
                         <p>If a dog chews shoes whose shoes does he choose?</p>
                     </div>
                 </div>
-                <div className="card bg-gray-100 shadow-xl">
+                <div className="card bg-gray-100 shadow-xl" data-aos="zoom-in-down"
+                
+                data-aos-duration="1500">
                     <figure className="px-10 pt-10">
                         <img src={img2} alt="Shoes" className="rounded-xl" />
                     </figure>
@@ -24,7 +28,9 @@ const Services = () => {
                         <p>If a dog chews shoes whose shoes does he choose?</p>
                     </div>
                 </div>
-                <div className="card bg-gray-100 shadow-xl">
+                <div className="card bg-gray-100 shadow-xl" data-aos="fade-left"
+                
+                data-aos-duration="1500">
                     <figure className="px-10 pt-10">
                         <img src={img3} alt="Shoes" className="rounded-xl" />
                     </figure>

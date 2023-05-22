@@ -1,5 +1,5 @@
 
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
 
 const SingleToy = ({ toy }) => {
     const { _id, carName, pictureUrl, price, sellerName, subCategory, sellerEmail } = toy;

@@ -1,36 +1,49 @@
-import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import useTitle from "../../Hooks/useTitle";
 
 
 const Login = () => {
+    useTitle('Login')
     const {signIn,loginWithGoogle}=useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
+    const from = location.state?.from?.pathname || '/';
+    const [error,setError] = useState('');
 
     const handleLogin = event => {
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-        const user = { email, password }
-        console.log(user);
         signIn(email,password)
         .then(result=>{
-            const user = result.user;
-            console.log(user);
+            const loggedUser = result.user;
+            console.log(loggedUser);
+            navigate(from,{replace:true});
         })
-        .catch(error=>console.log(error));
+        .catch(error=>setError(error));
+        
     }
 
 
-    const handleGoogleLogin =()=>{
-        loginWithGoogle();
-    }
+    const handleLoginGoogle = () => {
+        loginWithGoogle()
+            .then(res => {
+                const loggedUser = res.user;
+                console.log(loggedUser);
+                navigate(from, { replace: true });
+            })
+            .catch(err => setError(err));
+    };
     return (
         <div>
             <div className={`py-56 lg:py-10 bg-[url('https://i.ibb.co/gjVTwyC/banner-1.jpg')]  bg-center bg-cover relative `}>
                 <h2 className="text-center font bold text-5xl">Please Login</h2>
             </div>
-            <div className="hero  bg-base-200">
+            <div className="hero  bg-base-200" data-aos="fade-down"
+            data-aos-duration="1000">
                 <div className="hero-content">
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <form onSubmit={handleLogin}>
@@ -50,11 +63,14 @@ const Login = () => {
                                         <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                     </label>
                                 </div>
-                                <div className="form-control mt-2">
+                                <div className="form-control mt-2" data-aos="fade-right" data-aos-duration="1000">
                                     <button className="btn bg-pink-300 border-none">Login</button>
                                 </div>
-                                <div className="form-control">
-                                    <button className="btn" onClick={handleGoogleLogin}>Sign In With Google</button>
+                                <div className="form-control" data-aos="fade-left" data-aos-duration="1000">
+                                    <button className="btn" onClick={handleLoginGoogle}>Sign In With Google</button>
+                                </div>
+                                <div>
+                                    <p>{error.message}</p>
                                 </div>
                                 <div className="form-control">
                                     <p><small>New User? <Link to={'/register'} className="btn btn-link">Register Here</Link></small></p>

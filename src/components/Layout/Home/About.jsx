@@ -3,11 +3,21 @@
 const About = () => {
     return (
 
-        <div className='md:mx-20 my-28 grid md:grid-cols-2 bg-gray-200 rounded'>
-            <div className='p-2'>
+        <div className='md:mx-20 my-28 grid md:grid-cols-2 bg-gray-200 rounded'  data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-duration="1500">
+            <div className='p-2' data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"
+                data-aos-duration="1000"
+                >
                 <img className='img-fluid rounded' src="https://cdn.trendhunterstatic.com/thumbs/341/toy-store.jpeg" alt="" />
             </div>
-            <div className="section-title flex flex-col justify-center">
+            <div className="section-title flex flex-col justify-center" 
+                data-aos="fade-left"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"
+                data-aos-duration="1000">
                 <div className=' px-8 py-12'>
                     <div className='flex mx-auto space-x-3'>
                         <div className=' w-20 md:w-24 h-1 bg-gray-300 inline-flex mt-auto mb-5 rounded-e-md rounded-s-md'></div>

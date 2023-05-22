@@ -1,7 +1,11 @@
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../providers/AuthProvider";
+import Swal from 'sweetalert2'
+import useTitle from "../../Hooks/useTitle";
+
 const AddToy = () => {
+    useTitle('AddToy');
     const {user} =useContext(AuthContext)
 
     const { register, handleSubmit,formState: { errors } } = useForm();
@@ -16,7 +20,12 @@ const AddToy = () => {
         .then(res=>res.json())
         .then(result=>{
             if(result.insertedId){
-                alert('Booking Successfully')
+                Swal.fire({
+                    title: 'Toy Added Successfully',
+                    text: 'Do you want to continue',
+                    icon: 'success',
+                    confirmButtonText: 'Ok'
+                  })
             }
         })
         
@@ -27,8 +36,7 @@ const AddToy = () => {
     return (
         <div>
             <h2 className="hero bg-base-100 text-5xl text-center my-5 ">Add A Toy</h2>
-
-            <div className="hero bg-base-100">
+            <div className="hero bg-base-100" data-aos="fade-down" data-aos-duration="700">
                 <div className="hero-content flex-col ">
                     <div className="card bg-pink-100">
                         <form onSubmit={handleSubmit(onSubmit)}>

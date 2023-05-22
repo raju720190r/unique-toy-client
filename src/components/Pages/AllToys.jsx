@@ -1,12 +1,13 @@
 import { useContext, useEffect, useState } from "react";
 import SingleToy from "./SingleToy";
 import { AuthContext } from "../../providers/AuthProvider";
+import useTitle from "../../Hooks/useTitle";
 
 
 const AllToys = () => {
+    useTitle('AllToys');
     const { user } = useContext(AuthContext)
     const [toys, setToys] = useState([]);
-    // const [searchText,setSearchText] =useState("");
     useEffect(() => {
         fetch('http://localhost:5000/toys')
             .then(res => res.json())
@@ -14,13 +15,7 @@ const AllToys = () => {
     }, [user]);
 
 
-    // useEffect(()=>{
-    //     fetch(`http://localhost:5000/toySearch/`,)
-    //     .then(res=>res.json())
-    //     .then(data=>{
-    //         console.log(data)
-    //     })
-    // },[])
+    
     return (
         <div className="overflow-x-auto w-full">
             <div className="lg:flex justify-between items-center px-20">
@@ -56,15 +51,7 @@ const AllToys = () => {
                     }
                 </tbody>
                 {/* foot */}
-                <tfoot>
-                    <tr>
-                        <th></th>
-                        <th>Name</th>
-                        <th>Job</th>
-                        <th>Favorite Color</th>
-                        <th></th>
-                    </tr>
-                </tfoot>
+                
 
             </table>
         </div>

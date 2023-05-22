@@ -1,9 +1,12 @@
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import { updateProfile } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
 
-const {createUser}=useContext(AuthContext)
+const {createUser,logOut}=useContext(AuthContext);
+const navigate =useNavigate();
 
     const handleRegister = event => {
         event.preventDefault();
@@ -11,12 +14,17 @@ const {createUser}=useContext(AuthContext)
         const name = form.name.value;
         const email = form.email.value;
         const password = form.password.value;
-        const photoUrl = form.photourl.value;
+        const photoUrl = form.photoUrl.value;
         console.log(name, email, password, photoUrl);
         createUser(email,password)
         .then(res=>{
             const user =res.user;
-            console.log(user)
+            updateProfile(user, {
+                displayName: name,photoURL: photoUrl
+            });
+            logOut();
+            navigate('/login')
+            form.reset();
         })
         .catch(error=>console.log(error))
     }
@@ -53,7 +61,7 @@ const {createUser}=useContext(AuthContext)
                                     <label className="label">
                                         <span className="label-text">Photo URL</span>
                                     </label>
-                                    <input type="text" name="photourl" placeholder="Photo URL" className="input input-bordered" required />
+                                    <input type="text" name="photoUrl" placeholder="Photo URL" className="input input-bordered" required />
                                 </div>
                                 <div className="form-control mt-2">
                                     <input className="btn bg-pink-300 border-none" type="submit" value="Register Here" />

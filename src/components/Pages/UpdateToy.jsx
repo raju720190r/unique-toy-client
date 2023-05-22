@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { useLoaderData } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import Swal from 'sweetalert2'
 const UpdateToy = () => {
     const {user} =useContext(AuthContext)
     const loadedToys = useLoaderData();
@@ -19,7 +20,12 @@ const UpdateToy = () => {
         .then(res=>res.json())
         .then(result=>{
             if(result.modifiedCount>0){
-                alert('Update Successfully')
+                Swal.fire({
+                    title: 'Updated Successfully',
+                    text: 'Do you want to continue',
+                    icon: 'success',
+                    confirmButtonText: 'Ok'
+                  })
             }
         })
         

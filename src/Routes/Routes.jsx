@@ -11,6 +11,7 @@ import PrivateRoute from "./PrivateRoutes";
 import ViewDetails from "../components/Pages/ViewDetails";
 import UpdateToy from "../components/Pages/UpdateToy";
 import ErrorPage from "../components/Pages/Shared/ErrorPage";
+// import Tabs from "../components/Layout/Home/Tabs";
 
 
 const router = createBrowserRouter([
@@ -33,7 +34,7 @@ const router = createBrowserRouter([
       },
       {
        path:"blog",
-       element:<Blog></Blog>,
+       element:<PrivateRoute><Blog></Blog></PrivateRoute>,
       },
       {
         path:"myToy",
@@ -45,7 +46,7 @@ const router = createBrowserRouter([
       },
       {
         path:"allToy",
-        element:<PrivateRoute><AllToys></AllToys></PrivateRoute>
+        element:<AllToys></AllToys>
       },
       {
         path:'viewDetails/:id',
@@ -57,7 +58,8 @@ const router = createBrowserRouter([
         element:<UpdateToy></UpdateToy>,
         loader:({params})=>fetch(`http://localhost:5000/toys/${params.id}`)
 
-      }
+      },
+     
     
     ]
   },

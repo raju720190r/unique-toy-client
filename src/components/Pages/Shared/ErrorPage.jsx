@@ -1,7 +1,9 @@
 
 import { Link, useRouteError } from 'react-router-dom';
+import useTitle from '../../../Hooks/useTitle';
 
 const ErrorPage = () => {
+    useTitle('404')
     const error = useRouteError();
     console.error(error);
     return (

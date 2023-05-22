@@ -1,9 +1,11 @@
 import { useLoaderData } from "react-router-dom";
+import useTitle from "../../Hooks/useTitle";
 
 const ViewDetails = () => {
+    useTitle('ToyDetails')
     const loadedToys = useLoaderData();
-    const {carName, pictureUrl, rating, price, sellerName, quantity, sellerEmail, description } = loadedToys;
-    
+    const { carName, pictureUrl, rating, price, sellerName, quantity, sellerEmail, description } = loadedToys;
+
     return (
         <div>
             <h2 className="text-center text-5xl my-5">Toy Details</h2>
@@ -19,8 +21,6 @@ const ViewDetails = () => {
                     <p className="border-b-4 py-2 border-sky-200">Seller : {sellerName}</p>
                     <p className="border-b-4 py-2 border-sky-200">Seller email: {sellerEmail}</p>
                     <p className="border-b-4 py-2">Description: {description}</p>
-
-
                 </div>
             </div>
         </div>
