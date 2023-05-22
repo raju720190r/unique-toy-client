@@ -45,13 +45,13 @@ const AddToy = () => {
                                     <label className="label">
                                         <span className="label-text">Toy Name</span>
                                     </label>
-                                    <input className="input input-bordered" {...register("carName")} />
+                                    <input className="input input-bordered" {...register("carName",{ required: true })} />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Seller Name</span>
                                     </label>
-                                    <input className="input input-bordered"  {...register("sellerName")} />
+                                    <input className="input input-bordered"  {...register("sellerName",{ required: true })} />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
@@ -63,31 +63,31 @@ const AddToy = () => {
                                     <label className="label">
                                         <span className="label-text">Price</span>
                                     </label>
-                                    <input className="input input-bordered"  {...register("price")} />
+                                    <input className="input input-bordered"  {...register("price",{ required: true })} />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Rating</span>
                                     </label>
-                                    <input className="input input-bordered" {...register("rating")} />
+                                    <input className="input input-bordered" {...register("rating",{ required: true })} />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Quantity</span>
                                     </label>
-                                    <input className="input input-bordered"  {...register("quantity")} />
+                                    <input className="input input-bordered"  {...register("quantity",{ required: true })} />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Photo URL</span>
                                     </label>
-                                    <input className="input input-bordered"  {...register("pictureUrl")} />
+                                    <input className="input input-bordered"  {...register("pictureUrl",{ required: true })} />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Description</span>
                                     </label>
-                                    <input className="input input-bordered" {...register("description")} />
+                                    <input className="input input-bordered" {...register("description",{ required: true })} />
                                 </div>
 
                             </div>
@@ -95,7 +95,7 @@ const AddToy = () => {
                                 <label className="label">
                                     <span className="label-text text-center">Category</span>
                                 </label>
-                                <select className="input" {...register("subCategory")}>
+                                <select className="input" {...register("subCategory",{ required: true })}>
                                     <option value="police">Police</option>
                                     <option value="luxury">Luxury</option>
                                     <option value="construction">Construction</option>

@@ -2,10 +2,11 @@
 import { Link } from "react-router-dom"
 
 const SingleToy = ({ toy }) => {
-    const { _id, carName, pictureUrl, price, sellerName, subCategory, sellerEmail } = toy;
+    const { _id, carName, pictureUrl, price, sellerName, subCategory, sellerEmail,quantity } = toy;
     return (
 
-        <tr>
+        <tr data-aos="fade-up"
+        data-aos-duration="1000">
             <th>
                 <label>
                     <input type="checkbox" className="checkbox" />
@@ -30,6 +31,7 @@ const SingleToy = ({ toy }) => {
                 <span className="badge badge-ghost badge-sm">{sellerEmail}</span>
             </td>
             <td>{price}</td>
+            <td>{quantity}</td>
             <th>
                 <Link to={`/viewDetails/${_id}`}><button className="btn btn-ghost bg-pink-100">details</button></Link>
             </th>

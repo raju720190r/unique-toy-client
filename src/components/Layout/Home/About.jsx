@@ -3,7 +3,7 @@
 const About = () => {
     return (
 
-        <div className='md:mx-20 my-28 grid md:grid-cols-2 bg-gray-200 rounded'  data-aos="fade-up"
+        <div className='md:mx-20 my-28 grid md:grid-cols-2 bg-gray-200 hover:bg-sky-200 rounded'  data-aos="fade-up"
         data-aos-easing="linear"
         data-aos-duration="1500">
             <div className='p-2' data-aos="fade-right"
@@ -24,8 +24,11 @@ const About = () => {
                         <h2 className='text-4xl font-lato font-bold'>About Us </h2>
                         <div className='w-20 md:w-24 h-1 bg-gray-300 inline-flex mt-auto mb-5 rounded-e-md rounded-s-md'></div>
                     </div>
+                    <h3 className="text-xl font-bold border-b-4 py-2 border-gray-300">Contact info</h3>
+                    <p className="border-b-4 py-2 border-gray-300"><span className="text-xl">Email:</span> uniquetoys@gmail.com</p>
+                    <p className="border-b-4 py-2 border-gray-300">Mirpur-10,Dhaka,Bangladesh</p>
                     <p className='my-5 font-popins text-slate-800'>
-                        We use all the information we collect from you to receive orders, send you emails and provide the most efficient and fastest Internet experience.This allows us to offer you special offers and discounts.We will not only provide your information to third parties unless you have your consent.Information will be disclosed to comply with any laws, regulations, applications of government laws or laws or judicial procedures.</p>
+                        We use all the information we collect from you to receive orders, send you emails and provide the most efficient and fastest Internet experience.This allows us to offer you special offers and discounts.We will not only provide your information to third parties unless you have your consent.</p>
                 </div>
             </div>
         </div>

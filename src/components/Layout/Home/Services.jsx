@@ -6,7 +6,7 @@ const Services = () => {
         <div className='lg:md:mx-20'>
             <h2 className='text-center font-bold text-3xl my-6'>Our Services</h2>
             <div className="grid lg:grid-cols-3 gap-5">
-                <div className="card bg-gray-100  shadow-xl" data-aos="fade-right"
+                <div className="card bg-gray-100 hover:bg-gray-300  shadow-xl" data-aos="fade-right"
                 data-aos-duration="1500"
                 >
                     <figure className="px-10 pt-10">
@@ -14,10 +14,10 @@ const Services = () => {
                     </figure>
                     <div className="card-body items-center text-center">
                         <h2 className="card-title">Money Return</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <p>If any of our products are faulty or broken, your money will be refunded</p>
                     </div>
                 </div>
-                <div className="card bg-gray-100 shadow-xl" data-aos="zoom-in-down"
+                <div className="card bg-gray-100 hover:bg-gray-300 shadow-xl" data-aos="zoom-in-down"
                 
                 data-aos-duration="1500">
                     <figure className="px-10 pt-10">
@@ -25,10 +25,10 @@ const Services = () => {
                     </figure>
                     <div className="card-body items-center text-center">
                         <h2 className="card-title">Support 24/7</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <p>Our shop is open 24 hours a day and is always serviced</p>
                     </div>
                 </div>
-                <div className="card bg-gray-100 shadow-xl" data-aos="fade-left"
+                <div className="card bg-gray-100 hover:bg-gray-300 shadow-xl" data-aos="fade-left"
                 
                 data-aos-duration="1500">
                     <figure className="px-10 pt-10">
@@ -36,7 +36,7 @@ const Services = () => {
                     </figure>
                     <div className="card-body items-center text-center">
                         <h2 className="card-title">Free Shipping</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <p>We provide free home delivery if you buy any product from our shop</p>
                     </div>
                 </div>
             </div>

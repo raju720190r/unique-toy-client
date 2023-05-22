@@ -1,10 +1,9 @@
 import useTitle from "../../../Hooks/useTitle";
 import About from "./About";
 import Banner from "./Banner";
+import CategoryData from "./CategoryData";
 import Gallery from "./Gallery";
-import Products from "./Products/Products";
 import Services from "./Services";
-// import Tabs from "./Tabs";
 
 
 const Home = () => {
@@ -13,8 +12,7 @@ const Home = () => {
         <div>
            <Banner></Banner>
            <Gallery></Gallery>
-           {/* <Tabs></Tabs> */}
-           <Products></Products>
+           <CategoryData></CategoryData>
            <Services></Services>
            <About></About>
         </div>

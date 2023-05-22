@@ -17,7 +17,7 @@ const ViewDetails = () => {
                     <h2 className="font-bold text-xl border-b-4 border-sky-200">{carName}</h2>
                     <p className="border-b-4 py-2 border-sky-200">Rating : {rating}</p>
                     <p className="border-b-4 py-2 border-sky-200">$ {price}</p>
-                    <p className="border-b-4 py-2 border-sky-200">$ {quantity}</p>
+                    <p className="border-b-4 py-2 border-sky-200">Quantity : {quantity}</p>
                     <p className="border-b-4 py-2 border-sky-200">Seller : {sellerName}</p>
                     <p className="border-b-4 py-2 border-sky-200">Seller email: {sellerEmail}</p>
                     <p className="border-b-4 py-2">Description: {description}</p>
