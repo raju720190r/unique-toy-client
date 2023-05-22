@@ -1,5 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import useTitle from "../../Hooks/useTitle";
+import { Rating } from '@smastrom/react-rating';
+import '@smastrom/react-rating/style.css';
 
 const ViewDetails = () => {
     useTitle('ToyDetails')
@@ -15,7 +17,7 @@ const ViewDetails = () => {
                 </div>
                 <div className="bg-pink-100 w-96 py-10 px-10 border-b-4">
                     <h2 className="font-bold text-xl border-b-4 border-sky-200">{carName}</h2>
-                    <p className="border-b-4 py-2 border-sky-200">Rating : {rating}</p>
+                    <p className="border-b-4 py-2 border-sky-200"><Rating style={{ maxWidth: 100 }} value={rating} readOnly /></p>
                     <p className="border-b-4 py-2 border-sky-200">$ {price}</p>
                     <p className="border-b-4 py-2 border-sky-200">Quantity : {quantity}</p>
                     <p className="border-b-4 py-2 border-sky-200">Seller : {sellerName}</p>

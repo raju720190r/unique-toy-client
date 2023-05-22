@@ -5,8 +5,7 @@ const SingleToy = ({ toy }) => {
     const { _id, carName, pictureUrl, price, sellerName, subCategory, sellerEmail,quantity } = toy;
     return (
 
-        <tr data-aos="fade-up"
-        data-aos-duration="1000">
+        <tr>
             <th>
                 <label>
                     <input type="checkbox" className="checkbox" />

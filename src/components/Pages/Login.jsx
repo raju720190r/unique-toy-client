@@ -4,6 +4,7 @@ import { AuthContext } from "../../providers/AuthProvider";
 import useTitle from "../../Hooks/useTitle";
 
 
+
 const Login = () => {
     useTitle('Login')
     const {signIn,loginWithGoogle}=useContext(AuthContext);
@@ -67,7 +68,7 @@ const Login = () => {
                                     <button className="btn bg-pink-300 border-none">Login</button>
                                 </div>
                                 <div className="form-control" data-aos="fade-left" data-aos-duration="1000">
-                                    <button className="btn" onClick={handleLoginGoogle}>Sign In With Google</button>
+                                    <button className="btn" onClick={handleLoginGoogle}> Sign In With Google</button>
                                 </div>
                                 <div>
                                     <p>{error.message}</p>

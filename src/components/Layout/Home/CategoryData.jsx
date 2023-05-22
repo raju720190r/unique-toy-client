@@ -29,10 +29,10 @@ const CategoryData = () => {
             </div>
             <div>
                 <Tabs>
-                    <TabList>
-                        <Tab>Luxury</Tab>
-                        <Tab>Police</Tab>
-                        <Tab>Construction</Tab>
+                    <TabList className="mb-5">
+                        <Tab className="btn mx-5 bg-pink-200 border-pink-200 border-4">Luxury</Tab>
+                        <Tab className="btn mx-5 bg-pink-200 border-pink-200 border-4">Police</Tab>
+                        <Tab className="btn mx-5 bg-pink-200 border-pink-200 border-4">Construction</Tab>
                     </TabList>
 
                     <TabPanel>
