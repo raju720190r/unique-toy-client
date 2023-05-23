@@ -3,21 +3,23 @@ import { AuthContext } from "../../providers/AuthProvider";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import useTitle from "../../Hooks/useTitle";
+import { data } from "autoprefixer";
 
 
 
 const MyToy = () => {
+
     useTitle('MyToy')
     const { user } = useContext(AuthContext);
     const [jobs, setJobs] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myToys/${user?.email}`)
+        fetch(`https://toys-store-server.vercel.app/myToys/${user?.email}`)
             .then(res => res.json())
             .then(data => setJobs(data))
     }, [user]);
-  
-// Handle Delete
+
+    // Handle Delete
 
     const handleDelete = id => {
         Swal.fire({
@@ -28,37 +30,34 @@ const MyToy = () => {
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
             confirmButtonText: 'Yes, delete it!'
-          }).then((result) => {
+        }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/toys/${id}`,{
-                method: 'DELETE'
-                
-            })
-                .then(res => res.json())
-                .then(data => {
-                    console.log(data)
-                    if(data.deletedCount>0){
-                        Swal.fire(
-                            'Deleted!',
-                            'Your file has been deleted.',
-                            'success'
-                          )
-                        const remaining = jobs.filter(job =>job._id !==id)
-                        setJobs(remaining)
-                    }
+                fetch(`https://toys-store-server.vercel.app/toys/${id}`, {
+                    method: 'DELETE'
+
                 })
-              
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data)
+                        if (data.deletedCount > 0) {
+                            Swal.fire(
+                                'Deleted!',
+                                'Your file has been deleted.',
+                                'success'
+                            )
+                            const remaining = jobs.filter(job => job._id !== id)
+                            setJobs(remaining)
+                        }
+                    })
             }
-          })
-         
-        
-        
-    }
-    
+        })
+    };
+
 
     return (
         <div>
             <h2 className="text-5xl text-center my-5">My Toy</h2>
+            
             <div className="overflow-x-auto w-full">
                 <table className="table w-full">
                     {/* head */}

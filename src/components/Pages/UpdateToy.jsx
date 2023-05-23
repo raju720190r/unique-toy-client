@@ -5,40 +5,38 @@ import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from 'sweetalert2'
 const UpdateToy = () => {
-    const {user} =useContext(AuthContext)
+    const { user } = useContext(AuthContext)
     const loadedToys = useLoaderData();
-    const {_id,carName, pictureUrl, rating, price, sellerName, quantity,subCategory,description,sellerEmail } = loadedToys;
-     const { register, handleSubmit,formState: { errors } } = useForm();
+    const { _id, carName, pictureUrl, rating, price, sellerName, quantity, subCategory, description} = loadedToys;
+    const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
-        fetch(`http://localhost:5000/toys/${_id}`,{
-            method:'PUT',
-            headers:{
-                'content-type':'application/json'
+        fetch(`http://localhost:5000/toys/toys/${_id}`, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
             },
-            body:JSON.stringify(data)
+            body: JSON.stringify(data)
         })
-        .then(res=>res.json())
-        .then(result=>{
-            if(result.modifiedCount>0){
-                Swal.fire({
-                    title: 'Updated Successfully',
-                    text: 'Do you want to continue',
-                    icon: 'success',
-                    confirmButtonText: 'Ok'
-                  })
-            }
-        })
-        
-console.log(data)
+            .then(res => res.json())
+            .then(result => {
+                if (result.modifiedCount > 0) {
+                    Swal.fire({
+                        title: 'Updated Successfully',
+                        text: 'Do you want to continue',
+                        icon: 'success',
+                        confirmButtonText: 'Ok'
+                    })
+                }
+            })
     };
-    
+
     return (
         <div>
             <h2 className="hero bg-base-100 text-5xl text-center my-5 ">Update Toy</h2>
 
             <div className="hero bg-base-100">
                 <div className="hero-content flex-col ">
-                    <div className="card bg-pink-100">
+                    <div className="card bg-sky-100">
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <div className="card-body grid lg:grid-cols-2">
                                 <div className="form-control">
@@ -51,19 +49,19 @@ console.log(data)
                                     <label className="label">
                                         <span className="label-text">Seller Name</span>
                                     </label>
-                                    <input className="input input-bordered"  defaultValue={sellerName}{...register("sellerName")} />
+                                    <input className="input input-bordered" defaultValue={sellerName}{...register("sellerName")} />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Seller Email</span>
                                     </label>
-                                    <input className="input" defaultValue={sellerEmail}{...register("sellerEmail", { required: true })} />
+                                    <input className="input" defaultValue={user?.email}{...register("sellerEmail", { required: true })} />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Price</span>
                                     </label>
-                                    <input className="input input-bordered"  defaultValue={price}{...register("price")} />
+                                    <input className="input input-bordered" defaultValue={price}{...register("price")} />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
@@ -75,13 +73,13 @@ console.log(data)
                                     <label className="label">
                                         <span className="label-text">Quantity</span>
                                     </label>
-                                    <input className="input input-bordered"  defaultValue={quantity}{...register("quantity")} />
+                                    <input className="input input-bordered" defaultValue={quantity}{...register("quantity")} />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Photo URL</span>
                                     </label>
-                                    <input className="input input-bordered"  defaultValue={pictureUrl}{...register("pictureUrl")} />
+                                    <input className="input input-bordered" defaultValue={pictureUrl}{...register("pictureUrl")} />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
@@ -101,8 +99,11 @@ console.log(data)
                                     <option value="construction">Construction</option>
                                 </select>
                             </div>
+                            <div>
+                                <p>{errors.message}</p>
+                            </div>
                             <div className="form-control">
-                                <input className="btn bg-sky-300 border-none" type="submit" value="Update" />
+                                <input className="btn bg-pink-300 border-none" type="submit" value="Update" />
                             </div>
                         </form>
                     </div>

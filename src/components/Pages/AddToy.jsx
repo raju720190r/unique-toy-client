@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from 'sweetalert2'
@@ -10,7 +10,7 @@ const AddToy = () => {
 
     const { register, handleSubmit,formState: { errors } } = useForm();
     const onSubmit = data => {
-        fetch('http://localhost:5000/toys',{
+        fetch('https://toys-store-server.vercel.app/toys',{
             method:'POST',
             headers:{
                 'content-type':'application/json'
@@ -31,6 +31,7 @@ const AddToy = () => {
         
 
     };
+     
 
 
     return (

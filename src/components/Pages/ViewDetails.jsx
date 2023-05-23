@@ -11,7 +11,7 @@ const ViewDetails = () => {
     return (
         <div>
             <h2 className="text-center text-5xl my-5">Toy Details</h2>
-            <div className="grid lg:flex my-5 lg:px-40">
+            <div className="grid lg:flex my-5 w-full lg:justify-center">
                 <div className="bg-sky-100 w-96">
                     <img src={pictureUrl} alt="" />
                 </div>

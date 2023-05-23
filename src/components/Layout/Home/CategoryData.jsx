@@ -7,7 +7,7 @@ const CategoryData = () => {
     const [policeCar, setPoliceCar] = useState([]);
     const [constructionCar,setConstructionCar]=useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/toys')
+        fetch('https://toys-store-server.vercel.app/toys')
             .then(res => res.json())
             .then(data => {
                 const luxuryData = data.filter(d => d.subCategory === "luxury");
@@ -29,7 +29,7 @@ const CategoryData = () => {
             </div>
             <div>
                 <Tabs>
-                    <TabList className="mb-5">
+                    <TabList className="grid mb-5 gap-5 lg:grid-cols-3 mx-16">
                         <Tab className="btn mx-5 bg-pink-200 border-pink-200 border-4">Luxury</Tab>
                         <Tab className="btn mx-5 bg-pink-200 border-pink-200 border-4">Police</Tab>
                         <Tab className="btn mx-5 bg-pink-200 border-pink-200 border-4">Construction</Tab>
