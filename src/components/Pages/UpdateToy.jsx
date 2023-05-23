@@ -10,7 +10,8 @@ const UpdateToy = () => {
     const { _id, carName, pictureUrl, rating, price, sellerName, quantity, subCategory, description} = loadedToys;
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
-        fetch(`http://localhost:5000/toys/toys/${_id}`, {
+        console.log(data)
+        fetch(`https://toys-store-server.vercel.app/toys/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

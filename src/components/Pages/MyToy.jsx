@@ -3,7 +3,7 @@ import { AuthContext } from "../../providers/AuthProvider";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import useTitle from "../../Hooks/useTitle";
-import { data } from "autoprefixer";
+// import { data } from "autoprefixer";
 
 
 
@@ -12,6 +12,7 @@ const MyToy = () => {
     useTitle('MyToy')
     const { user } = useContext(AuthContext);
     const [jobs, setJobs] = useState([]);
+   
 
     useEffect(() => {
         fetch(`https://toys-store-server.vercel.app/myToys/${user?.email}`)
@@ -56,8 +57,10 @@ const MyToy = () => {
 
     return (
         <div>
-            <h2 className="text-5xl text-center my-5">My Toy</h2>
-            
+            <div className="text-center mb-5">
+                <h2 className="text-5xl my-5">My Toy</h2>
+                <button ></button>
+                </div>
             <div className="overflow-x-auto w-full">
                 <table className="table w-full">
                     {/* head */}
