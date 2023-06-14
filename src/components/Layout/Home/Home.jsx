@@ -2,6 +2,7 @@ import useTitle from "../../../Hooks/useTitle";
 import About from "./About";
 import Banner from "./Banner";
 import CategoryData from "./CategoryData";
+import Counter from "./Counter.Jsx";
 import Gallery from "./Gallery";
 import Services from "./Services";
 
@@ -13,6 +14,7 @@ const Home = () => {
            <Banner></Banner>
            <Gallery></Gallery>
            <CategoryData></CategoryData>
+           <Counter></Counter>
            <Services></Services>
            <About></About>
         </div>

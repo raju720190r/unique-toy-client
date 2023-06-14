@@ -5,7 +5,7 @@ const Services = () => {
     return (
         <div className='lg:md:mx-20'>
             <h2 className='text-center font-bold text-3xl my-6'>Our Services</h2>
-            <div className="grid lg:grid-cols-3 gap-5">
+            <div className="grid md:grid-cols-3 lg:grid-cols-3 gap-5">
                 <div className="card bg-gray-100 hover:bg-gray-300  shadow-xl" data-aos="fade-right"
                 data-aos-duration="1500"
                 >

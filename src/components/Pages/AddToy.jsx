@@ -8,7 +8,7 @@ const AddToy = () => {
     useTitle('AddToy');
     const {user} =useContext(AuthContext)
 
-    const { register, handleSubmit,formState: { errors } } = useForm();
+    const { register, handleSubmit} = useForm();
     const onSubmit = data => {
         fetch('https://toys-store-server.vercel.app/toys',{
             method:'POST',

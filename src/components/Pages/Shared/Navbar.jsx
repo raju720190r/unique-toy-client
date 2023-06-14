@@ -11,7 +11,6 @@ const Navbar = () => {
 
     const navbar = <>
         <li><Link to={'/'}>Home</Link></li>
-        <li><Link to={'/blog'}>Blog</Link></li>
         <li><Link to={'/allToy'}>All Toys</Link></li>
         {user?.email ? <>
             <li><Link to={'/addToy'}>Add Toy</Link></li>
@@ -23,7 +22,7 @@ const Navbar = () => {
     </>
 
     return (
-        <div className="navbar bg-gray-200 px-5" data-aos="fade-down"
+        <div className="md:navbar bg-gray-200 px-5" data-aos="fade-down"
             data-aos-easing="linear"
             data-aos-duration="500">
 

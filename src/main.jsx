@@ -1,4 +1,4 @@
-
+import AnimatedCursor from "react-animated-cursor"
 import ReactDOM from 'react-dom/client'
 import './index.css'
 
@@ -13,8 +13,11 @@ import React from 'react';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AuthProvider>
-      <RouterProvider router={router} />
+      <div className='max-w-screen-xl mx-auto'>
+        <RouterProvider router={router} />
+        <AnimatedCursor />
+        </div>
     </AuthProvider>
-
-  </React.StrictMode>,
+  
+  </React.StrictMode >,
 )

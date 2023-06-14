@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
-import SingleToy from "./SingleToy";
 import { AuthContext } from "../../providers/AuthProvider";
 import useTitle from "../../Hooks/useTitle";
+import Product from "../Layout/Home/Products/Product";
 
 
 const AllToys = () => {
@@ -9,6 +9,7 @@ const AllToys = () => {
     const { user } = useContext(AuthContext)
     const [toys, setToys] = useState([]);
     const [searchText, setSearchText] = useState("");
+    console.log(searchText)
     
     useEffect(() => {
         fetch('https://toys-store-server.vercel.app/toys')
@@ -18,22 +19,13 @@ const AllToys = () => {
 
     // Handle Search
     const handleSearch = () => {
-        fetch(`http://localhost:5000/toys/toySearch/${searchText}`)
+        fetch(`https://toys-store-server.vercel.app/toys/toySearch/${searchText}`)
         .then(res => res.json())
         .then(data => {
             console.log(data);
             setToys(data)
           });
       };
-
-
-    useEffect(() => {
-        
-            
-           
-               
-          
-    }, [])
 
     return (
         <div className="overflow-x-auto w-full">
@@ -50,31 +42,11 @@ const AllToys = () => {
                     </div>
                 </div>
             </div>
-            <table className="table w-full">
-                {/* head */}
-                <thead>
-                    <tr>
-                        <th>
-                            <label>
-                                <input type="checkbox" className="checkbox" />
-                            </label>
-                        </th>
-                        <th>Name</th>
-                        <th>Seller Name & Email</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
-                        <th>Details</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        toys?.slice(0, 20).map(toy => <SingleToy key={toy._id} toy={toy}></SingleToy>)
-                    }
-                </tbody>
-                {/* foot */}
-
-
-            </table>
+            <div className='grid lg:grid-cols-3 gap-5 lg:px-20 my-10'>
+                            {
+                               toys.map(data => <Product key={data._id} data={data}></Product>)
+                            }
+                        </div>
         </div>
     );
 };
